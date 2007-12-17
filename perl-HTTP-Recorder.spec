@@ -21,7 +21,6 @@ BuildRequires:	perl(URI)
 BuildRequires:  perl(Email::Simple)
 BuildRequires:  perl(Class::Accessor::Fast)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is a browser-independent recorder for recording interactions with
