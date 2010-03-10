@@ -3,14 +3,16 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	Record interaction with websites
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/L/LE/LEIRA/%{upstream_name}-%{upstream_version}.tar.bz2
-
+# patch from https://rt.cpan.org/Public/Bug/Display.html?id=14388
+# fix crash preventing the use of HTTP-Recorder
+Patch0:      HTTP-Recorder-0.05-fix_cpan_14388.diff
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
@@ -29,6 +31,7 @@ web sites.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+%patch0 -p0
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
