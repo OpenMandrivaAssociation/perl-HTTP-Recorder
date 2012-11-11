@@ -1,0 +1,14 @@
+Index: lib/HTTP/Recorder.pm
+===================================================================
+--- lib/HTTP/Recorder.pm
++++ lib/HTTP/Recorder.pm	2010-03-10 01:28:40.000000000 +0100
+@@ -344,6 +344,9 @@
+     # get rid of the arguments we added
+     my $prefix = $self->{prefix};
+ 
++    # bug fix for rt 14388 (sscaffidi)
++    $content = URI->new( $content );
++
+     for my $key ($content->query_param) {
+ 	if ($key =~ /^$prefix-/) {
+ 	    $content->query_param_delete($key);
