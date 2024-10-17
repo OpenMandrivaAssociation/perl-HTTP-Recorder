@@ -8,7 +8,7 @@ Release:	5
 Summary:	Record interaction with websites
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/L/LE/LEIRA/%{upstream_name}-%{upstream_version}.tar.bz2
 # patch from https://rt.cpan.org/Public/Bug/Display.html?id=14388
 # fix crash preventing the use of HTTP-Recorder
