@@ -13,6 +13,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/L/LE/LEIRA/%{upstream_name}-%{up
 # patch from https://rt.cpan.org/Public/Bug/Display.html?id=14388
 # fix crash preventing the use of HTTP-Recorder
 Patch0:		HTTP-Recorder-0.05-fix_cpan_14388.diff
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(HTML::Parser)
 BuildRequires:	perl(HTTP::Request::Params)
