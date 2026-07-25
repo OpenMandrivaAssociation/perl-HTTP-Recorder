@@ -1,15 +1,15 @@
 %define upstream_name	 HTTP-Recorder
-%define upstream_version 0.05
+%define upstream_version 0.07
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Record interaction with websites
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/L/LE/LEIRA/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://github.com/semuel/perl-cpan-http-recorder
+Source0:	https://cpan.metacpan.org/authors/id/S/SE/SEMUELF/HTTP-Recorder-%{upstream_version}.tar.gz
 # patch from https://rt.cpan.org/Public/Bug/Display.html?id=14388
 # fix crash preventing the use of HTTP-Recorder
 Patch0:		HTTP-Recorder-0.05-fix_cpan_14388.diff
