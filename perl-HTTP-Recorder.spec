@@ -1,15 +1,13 @@
 %define upstream_name	 HTTP-Recorder
-%define upstream_version 0.07
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.07
+Release:	2
 
 Summary:	Record interaction with websites
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/semuel/perl-cpan-http-recorder
-Source0:	https://cpan.metacpan.org/authors/id/S/SE/SEMUELF/HTTP-Recorder-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SE/SEMUELF/HTTP-Recorder-%{version}.tar.gz
 # patch from https://rt.cpan.org/Public/Bug/Display.html?id=14388
 # fix crash preventing the use of HTTP-Recorder
 Patch0:		HTTP-Recorder-0.05-fix_cpan_14388.diff
@@ -28,7 +26,7 @@ This is a browser-independent recorder for recording interactions with
 web sites.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 %patch0 -p0
 
 %build
@@ -54,9 +52,7 @@ make test
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.50.0-1mdv2010.0
 + Revision: 403268
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.05-5mdv2009.0
+- rebuild using %0.07 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.05-5mdv2009.0
 + Revision: 257249
 - rebuild
 
